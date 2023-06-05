@@ -7,8 +7,8 @@
       Case Problem 1
 
       CGIP Registration Form
-      Author: 
-      Date:   
+      Author: An D Truong
+      Date:   2023-06-05
 
       Filename:   cg_register.html
 
@@ -19,6 +19,9 @@
    <title>CGIP Registration Form</title>
    <link href="cg_base.css" rel="stylesheet" />
    <link href="cg_styles.css" rel="stylesheet" />
+   <link rel="stylesheet" href="cg_forms.css">
+   <link rel="stylesheet" href="cg_validate.css">
+   <script src="cg_script.js"></script>
 </head>
 
 <body>
@@ -50,9 +53,60 @@
    <section>
       <h1>Conference Registration Form</h1>
       <p>Required Item (*)</p>
-      
+      <form action="http://www.example.com/cg/register" method="post">
+      <div>
+        <label for="title">Title</label>
+        <input type="text" name="title" id="titleBox" list="titleList">
+        <datalist id="titleList">
+        <option value="Mr."></option>
+        <option value="Mrs."></option>
+        <option value="Ms."></option>
+        <option value="Prof."></option>
+        <option value="Dr."></option>
+        <option value="Assit. Prof."></option>
+        <option value="Assoc. Prof."></option>
+        </datalist>
+      </div>
+      <div>
+        <label for="firstName">First Name*</label>
+        <input type="text" name="firstName" id="fnBox" required>
+      </div>
+      <div>
+        <label for="lastName">Last Name*</label>
+        <input type="text" name="lastName" id="lnBox" required>
+      </div>
+      <div>
+        <label for="address">Address*</label>
+    <textarea name="address" id="addBox" required></textarea>
+      </div>
+      <div>
+        <label for="group">Company and University</label>
+        <input type="text" name="group" id="groupBox">
+      </div>
+      <div>
+        <label for="email">Email*</label>
+        <input type="email" name="email" id="mailBox" required>
+      </div>
+      <div>
+        <label for="phoneNumber">Phone Number*</label>
+        <input type="tel" name="phoneNumber" id="phoneBox" placeholder="(nnn) nnn-nnnn" required pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$">
+      </div>
+      <div>
+        <label for="acgopID">ACGIP Membership Number</label>
+        <input type="text" name="acgopID" id="idBox" placeholder="acgip-nnnnnn" required pattern="n ^acgip\-\d{6}$">
+      </div>
+      <label for="regList">Registration Category</label>
+      <select name="" id="regList">
+        <option value="member">ACGIP Member ($695)</option>
+        <option value="nonmember">Non-Member ($795)</option>
+        <option value="student">Student ($310)</option>
+        <option value="poster">Poster ($95)</option>
+        <option value="guest">Guest ($35)</option>
+      </select>
+      <p><input type="submit" name="continue" value="Continue"></p>
+    </form>
    </section>
-   
+
    <aside>
       <dl>
          <dt>ACGIP Member ($695)</dt>
