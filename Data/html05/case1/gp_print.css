@@ -17,18 +17,38 @@
 
 
 /* Hidden Objects */
-
-
-
-
-
+@media print {
+nav, footer, article {
+   display: none;
+}
 
 
 /* Comic Book Sheet Styles */
 
 
+section#sheet {
+   width: 6in;
+   margin: 0 auto 0 auto;
+}
 
+img[class*="size1"]
+.size1 img {
+  width: 5in;
+}
 
+img[class*="size2"] {
+  width: 3in;
+}
+
+img[class*="size3"] {
+  width: 2in;
+}
+
+img[class*="size4"] {
+  width: 1.5in;
+}
+
+}
 
 
 
