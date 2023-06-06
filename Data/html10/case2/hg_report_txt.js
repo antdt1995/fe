@@ -5,8 +5,8 @@
    Tutorial 10
    Case Problem 2
 
-   Author: 
-   Date:   
+   Author: An D Truong
+   Date:   2023-06-06
    
    Filename: hg_report.js
 	

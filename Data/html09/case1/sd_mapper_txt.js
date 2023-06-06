@@ -4,8 +4,8 @@
    Case Problem 1
 
    Planisphere Script
-   Author: 
-   Date:   
+   Author: An D Truong
+   Date:   2023-06-06
 
 */
 
